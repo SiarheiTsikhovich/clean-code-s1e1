@@ -42,17 +42,21 @@ body {
   display: flex;
 }
 
-ul {
+.incomplete-tasks,
+.completed-tasks {
   margin: 0;
   padding: 0px;
 }
 
-li,
-h3 {
+.incomplete-tasks__edit,
+.incomplete-tasks__save,
+.completed-tasks__edit,
+.h3 {
   list-style: none;
 }
 
 .input,
+.input-checked,
 .btn,
 .btn-delete,
 .btn-edit {
@@ -61,8 +65,7 @@ h3 {
 
 .btn,
 .btn-delete,
-.btn-edit
- {
+.btn-edit {
   background: none;
   border: 0px;
   color: #888;
@@ -90,7 +93,7 @@ h3 {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -103,7 +106,7 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.input:focus {
   color: #333;
 }
 
@@ -118,32 +121,41 @@ input[type="text"]:focus {
 }
 
 /* Task list */
-li {
+.incomplete-tasks__edit,
+.incomplete-tasks__save,
+.completed-tasks__edit{
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-li>* {
+.incomplete-tasks__edit>*,
+.incomplete-tasks__save>*,
+.completed-tasks__edit>*{
   vertical-align: middle;
 }
 
-li>input[type="checkbox"] {
+.incomplete-tasks__edit>.input-checked,
+.incomplete-tasks__save>.input-checked,
+.completed-tasks__edit>.input-checked {
   margin: 0 10px;
 }
 
-li>label {
+.incomplete-tasks__edit>.label,
+.incomplete-tasks__save>.label,
+.completed-tasks__edit>.label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li>input[type="text"] {
+.incomplete-tasks__edit>.input,
+.incomplete-tasks__save>.input,
+.completed-tasks__edit>.input {
   width: 226px
 }
 
@@ -158,20 +170,22 @@ li>input[type="text"] {
 }
 
 /* Completed */
-ul#completed-tasks label {
+.completed-tasks .label {
   text-decoration: line-through color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
-  display: none
+.incomplete-tasks__edit .input,
+.incomplete-tasks__save .input,
+.completed-tasks__edit .input {
+  display: none;
 }
 
-ul li.incomplete-tasks__save input[type="text"] {
+.incomplete-tasks__save_item .input {
   display: inline-block;
   width: 224px
 }
 
-ul li.incomplete-tasks__save label {
+.incomplete-tasks__save_item .label{
   display: none;
 }
