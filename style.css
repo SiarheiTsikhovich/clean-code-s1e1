@@ -95,6 +95,12 @@ body {
   text-transform: uppercase;
 }
 
+.label[for="new-task"] {
+  display: block;
+  width: 500px;
+}
+
+
 .input {
   margin: 0;
   font-size: 18px;
@@ -125,7 +131,7 @@ body {
 /* Task list */
 .incomplete-tasks__edit,
 .incomplete-tasks__save,
-.completed-tasks__edit{
+.completed-tasks__edit {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -136,7 +142,7 @@ body {
 
 .incomplete-tasks__edit>*,
 .incomplete-tasks__save>*,
-.completed-tasks__edit>*{
+.completed-tasks__edit>* {
   vertical-align: middle;
 }
 
@@ -164,7 +170,7 @@ body {
 .btn-delete img {
   height: 2em;
   transform: rotateZ(45deg);
-  transition: transform 200ms ease-in;
+  transition: 200ms ease-in;
 }
 
 .btn-delete img:hover {
@@ -173,7 +179,8 @@ body {
 
 /* Completed */
 .completed-tasks .label {
-  text-decoration: line-through color: #888;
+  text-decoration: line-through;
+   color: #888;
 }
 
 /* Edit Task */
@@ -188,6 +195,6 @@ body {
   width: 224px;
 }
 
-.incomplete-tasks__save_item .label{
+.incomplete-tasks__save_item .label {
   display: none;
 }
